@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+/public/ffmpeg/
+/src-tauri/target/
+/src-tauri/gen/
+*.msi
+*.nsis.zip
 
 # Editor directories and files
 .vscode/*

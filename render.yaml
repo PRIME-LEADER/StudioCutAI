@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: studiocut-ai
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: API_HOST
+        value: 0.0.0.0
+      - key: REQUIRE_SUPABASE_AUTH
+        value: "true"
+      - key: VITE_API_BASE_URL
+        value: ""
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: API_ALLOWED_ORIGINS
+        value: "http://tauri.localhost"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: JAMENDO_CLIENT_ID
+        sync: false

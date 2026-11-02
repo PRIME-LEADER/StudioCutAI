@@ -1,0 +1,17 @@
+{
+  "name": "StudioCut AI Video Editor",
+  "short_name": "StudioCut",
+  "description": "A creative video editor for desktop and web.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0a10",
+  "theme_color": "#0b0a10",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

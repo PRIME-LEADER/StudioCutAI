@@ -1,0 +1,26 @@
+{
+  "1": {
+    "class_type": "TextPrompt",
+    "inputs": {
+      "text": "original prompt"
+    }
+  },
+  "2": {
+    "class_type": "VideoModelLoader",
+    "inputs": {
+      "model_name": "wan-video-model.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "EmptyVideoLatent",
+    "inputs": {
+      "width": 832,
+      "height": 480,
+      "length": 80
+    }
+  },
+  "4": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {}
+  }
+}

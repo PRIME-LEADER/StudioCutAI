@@ -4,19 +4,27 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "build": "node scripts/copy-ffmpeg-core.mjs && tsc -b && vite build",
+    "build:desktop": "npm run build -- --mode desktop",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "test": "node --test",
+    "preview": "vite preview",
+    "start": "node --env-file-if-exists=.env.local server.mjs",
+    "tauri:dev": "tauri dev",
+    "tauri:build:windows": "node --env-file-if-exists=.env.local scripts/check-desktop-config.mjs && tauri build --bundles nsis"
   },
   "dependencies": {
     "@ffmpeg/core": "^0.12.10",
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@ffmpeg/util": "^0.12.2",
+    "@supabase/supabase-js": "^2.118.0",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "tus-js-client": "^4.3.1"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

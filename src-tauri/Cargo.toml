@@ -1,0 +1,15 @@
+[package]
+name = "studiocut-ai"
+version = "0.1.0"
+description = "StudioCut AI desktop video editor"
+authors = ["StudioCut AI"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2" }
+
+[dependencies]
+tauri = { version = "2" }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
