@@ -3,6 +3,8 @@ services:
     name: studiocut-ai
     runtime: node
     plan: free
+    domains:
+      - app.studiocut.ai
     buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
